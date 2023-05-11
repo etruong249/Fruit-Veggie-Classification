@@ -33,6 +33,8 @@ images per fruit type: 1200 images<br>
 
 If not installed then run `!pip install wandb` and `import wandb` within your code.
 
+More info on this process can be found here: https://docs.wandb.ai/quickstart
+
 WeightsandBiases_Sweep.ipynb essentially loads the data generator in for the task of classifying both freshness and food type at the same time, then a wandb configuration is set and for each of the five models a wandb sweep is initialized and run with random search 5 times with 10 epoch each and the results are then uploaded to the weights and biases website for evaluation.
 
 data.ipynb is a notebook that has 3 different data generators for the 3 different classification task so that each of the 5 models will be run under the different classification tasks. The 3 data generators are split into a validation, train and test set. Splits are labled differently as to keep them seperated and each model is then run with the hyperparameters obtained in the weights and sweep. At the end of each traininig for each model and their task the training and validation accuracy and loss are plotted for comparison and predictions with test accuracy and loss are calcuated.
