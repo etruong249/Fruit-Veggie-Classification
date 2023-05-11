@@ -80,5 +80,5 @@ Differences in test loss between all 3 classification data splits:<br>
 Additionally, while the pretrained network may seem a bit more inconsistent at first, the jagged shapes within the plots actually are significantly smaller differences from the general trend compared to the model trained from scratch. Some of these performance deviations can just between a whole 5% and a jump in loss, whereas the pretrained model has differences nearly 1/10th of the difference.
 
 VGG16 is pretrained while LeNet is not:<br>
-![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet_andVGG16.png)<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet_and_VGG16.png)<br>
 
