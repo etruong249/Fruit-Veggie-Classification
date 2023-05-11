@@ -31,7 +31,7 @@ images per fruit type: 1200 images<br>
 
 **NOTE: You need a Weights and Biases account setup to run this code**
 
-If not installed then run '!pip install wandb' and 'import wandb' within your code.
+If not installed then run `!pip install wandb` and `import wandb` within your code.
 
 WeightsandBiases_Sweep.ipynb essentially loads the data generator in for the task of classifying both freshness and food type at the same time, then a wandb configuration is set and for each of the five models a wandb sweep is initialized and run with random search 5 times with 10 epoch each and the results are then uploaded to the weights and biases website for evaluation.
 
