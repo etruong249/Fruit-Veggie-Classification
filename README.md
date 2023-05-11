@@ -97,43 +97,43 @@ VGG16 is pretrained while LeNet is not:<br>
 
 ### Dataset File Structures:
 
--Fruits_Vegetables_Dataset
-    --FreshApple
-    --FreshBanana
-    --FreshBellpepper
-    --FreshCarrot
-    --FreshCucumber
-    --FreshMango
-    --FreshOrange
-    --FreshPotato
-    --FreshStrawberry
-    --FreshTomato
-    --RottenApple
-    --RottenBanana
-    --RottenBellpepper
-    --RottenCarrot
-    --RottenCucumber
-    --RottenMango
-    --RottenOrange
-    --RottenPotato
-    --RottenStrawberry
-    --RottenTomato
+-Fruits_Vegetables_Dataset <br>
+    --FreshApple <br>
+    --FreshBanana <br>
+    --FreshBellpepper <br>
+    --FreshCarrot <br>
+    --FreshCucumber <br>
+    --FreshMango <br>
+    --FreshOrange <br>
+    --FreshPotato <br>
+    --FreshStrawberry <br>
+    --FreshTomato <br>
+    --RottenApple <br>
+    --RottenBanana <br>
+    --RottenBellpepper <br>
+    --RottenCarrot <br>
+    --RottenCucumber <br>
+    --RottenMango <br>
+    --RottenOrange <br>
+    --RottenPotato <br>
+    --RottenStrawberry <br>
+    --RottenTomato <br>
     
- -Fruits_and_Veggies
-    --Apple
-    --Banana
-    --Bellpepper
-    --Carrot
-    --Cucumber
-    --Mango
-    --Orange
-    --Potato
-    --Strawberry
-    --Tomato
+ -Fruits_and_Veggies <br>
+    --Apple <br>
+    --Banana <br>
+    --Bellpepper <br>
+    --Carrot <br>
+    --Cucumber <br>
+    --Mango <br>
+    --Orange <br>
+    --Potato <br>
+    --Strawberry <br>
+    --Tomato <br>
 
--Freshness
-    --Fresh
-    --Rotten
+-Freshness <br>
+    --Fresh <br>
+    --Rotten <br>
     
 ### Reference Links
 - https://www.kaggle.com/code/blurredmachine/alexnet-architecture-a-complete-guide
