@@ -4,7 +4,30 @@
 
 The main goal was to compare performances of different architectures for convolutional neural networks. With each network having to label fruits and vegetables that were either rotten or fresh. We also were curious of the effects of splitting up the classification as well as seeing pretrained vs not pretrained models and stacked vs not stacked models to compare performance and get an idea of what works best for generic image classification.
 
+## Details about the data
+**Note: file structure is at the bottom of the notbook**
+
+Total images: 12000
+
+The images are split into fruit/veggie (10 classes), and freshness (2).
+
+Across the 20 classes: approximately 300 images each
+Images per freshness: 6000
+images per fruit type: 1200
+
+
+## What the 2 files do and brief overview of code:
+
+**NOTE: You need a Weights and Biases account setup to run this code**
+
+WeightsandBiases_Sweep.ipynb essentially loads the data generator in for the task of classifying both at the same time, then a wandb configuration is set and for each of the five models a wandb sweep is initialized and run with random search 5 times with 10 epoch each and the results are then uploaded to the weights and biases website for evaluation.
+
+data.ipynb is a notebook that has 3 different data generators for the 3 different classification task so that each of the 5 models will be run under the different classification tasks. The 3 data generators are split into a validation, train and test set. Splits are labled differently as to keep them seperated and each model is then run with the hyperparameters obtained in the weights and sweep. At the end of each traininig for each model and their task the training and validation accuracy and loss are plotted for comparison and  predictions with test accuracy and loss are calcuated.
+
+Experimentation of models (testing which ones worked and whcih ones didn't/were not feasable to run) was done in earlier versions of the code and are not available in the final versions.
+
 ## Description:
+
 Utilizing different CNN architectures and comparing their performances across 3 datasets. The datasets involved are duplicates of each other, but separated into different folders so they can be labeled differently. 
 The number of classes across the datasets are as follows: Fruits_Vegetables_Dataset - 20 classes, Fruits_and_Veggies - 10 classes, Freshness - 2 classes.
 The datasets were created and read into the code by reading from the folders they're contained in and labeled according to the folder name as opposed to the file name. Additional information of how the folders are structured is below.
@@ -135,6 +158,13 @@ VGG16 is pretrained while LeNet is not:<br>
     --Fresh <br>
     --Rotten <br>
     
+
+## Summary:
+
+* The less classes there are generally the more accurate the predictions, this causes model variance to increase though as can be seen in the plots for training and test accuracy/loss.
+* Pretrained models tend to vastly outperform models trained from scratch (this can be due to the classificaiton tasks being very general and not niche). Many images in the dataset were generic photos of fruit, some looked like stock photos
+* Classification tasks being split up seems to have a slight improvement on accuracy, regardless the jump in accuracy was much more apparent when moving from 10 (Food type) to 2 classes (Freshness), compared to 20 (Both classes) to 10 classes (Food type).
+
 ### Reference Links
 - https://www.kaggle.com/code/blurredmachine/alexnet-architecture-a-complete-guide
 - https://medium.com/@mgazar/lenet-5-in-9-lines-of-code-using-keras-ac99294c8086
