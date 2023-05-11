@@ -29,7 +29,7 @@ AlexNet:<br>
 ![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/alexnet_tune.png)<br>
 
 VGG16:<br>
-![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/vg16_tune.png)<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/vgg16_tune.png)<br>
 
 SingleCNN:<br>
 ![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/singleCNN_tune.png)<br>
