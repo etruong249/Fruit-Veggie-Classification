@@ -1,5 +1,16 @@
 # Fruit-Veggie-Classification
 
+
+## Repository structure:
+
+ReadMe_images - Images results from the code that were used (some not used) in this notebook.
+
+data.ipynb - File for final run of models (MORE INFO BELOW)
+
+WeightsandBiases - File for Hyperparameter tuning (MORE INFO BELOW)
+
+**The data can be found at:** https://www.kaggle.com/datasets/muhriddinmuxiddinov/fruits-and-vegetables-dataset
+
 ## Goal:
 
 The main goal was to compare performances of different architectures for convolutional neural networks. With each network having to label fruits and vegetables that were either rotten or fresh. We also were curious of the effects of splitting up the classification as well as seeing pretrained vs not pretrained models and stacked vs not stacked models to compare performance and get an idea of what works best for generic image classification.
