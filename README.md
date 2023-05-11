@@ -12,5 +12,36 @@ This repository contains the notebook and the accompanying images that were obta
 
 In terms of variable naming conventions in order to differentiate the different models trained on which dataset, number 1 refers to the Fruits_Vegetables_Dataset with 20 classes, number 2 represents Fruits_and_Veggies, and number 3 represents freshness. The results from the experiments are as follows (only linking 2 of the 5 architectures for the sake of space and most experiments yielded similar results):
 
-LeNet-5:
-LeNet1.png
+LeNet-5:<br>
+Both freshness and fruit/veggie classification:<br>
+
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet1-acc.png)<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet1-loss.png)<br>
+
+Just fruit/veggie classification:<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet2-acc.png)<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet2-loss.png)<br>
+
+Just freshness classification:<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet3-acc.png)<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet3-loss.png)<br>
+
+InceptionResNetV2:<br>
+Both freshness and fruit/veggie classification:<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/ResV2-1-acc.png)<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/ResV2-1-loss.png)<br>
+
+Just fruit/veggie classification:<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/ResV2-2-acc.png)<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/ResV2-2-loss.png)<br>
+
+Just freshness classification:<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/ResV2-3-acc.png)<br>
+![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/ResV2-3-loss.png)<br>
+
+The examples listed above include the LeNet-5 models and InceptionResNetV2. The reason behind these 2 choices are to showcase the performance differences between models from scratch and a pretrained model that used weights trained from imagenet. Between the 2 models, the LeNet-5 obtained a much lower accuracy score and much higher loss value compared to the InceptionResNetV2 model. This could be due to a list of factors, but the primary reasons are due to the initial starting weights and the depth and complexity difference between the 2 models. The use of the inception module alone is more complex and allows for better computations of each image and its accompanying weight that's calculated. 
+However, the use of the inception module is not generalizable to the other pretrained model used, which was the VGG-16. The VGG-16 is also pretrained using weights from imagenet, but performed substantially worse compared to the inceptionV2 architecture. It's performance still ranges about 10-15% higher in accuracy compared to LeNet-5. The use of pretrained models helps with computation times and memory usage, but it also allows for superior performance due to the generalizability of the pretrained data and just how generalizable our current dataset is.
+
+A similar trend can also be seen across the 3 different classification tasks. As the number of classes decreased, the shape of the validation accuracy across the epochs became more rigid as opposed to fluid. This could be due to the incraesed compexity and variance of the model, but for output. Because the models began with classifying 20 classes, there are more complex decision boundaries which will result in higher variance and a more complex accuracy line. 
+Additionally, while the pretrained network may seem a bit more inconsistent at first, the jagged shapes within the plots actually are significantly smaller differences from the general trend compared to the model trained from scratch. Some of these performance deviations can just between a whole 5% and a jump in loss, whereas the pretrained model has differences nearly 1/10th of the difference.
+
