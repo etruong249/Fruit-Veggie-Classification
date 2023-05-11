@@ -95,3 +95,11 @@ Additionally, while the pretrained network may seem a bit more inconsistent at f
 VGG16 is pretrained while LeNet is not:<br>
 ![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet_and_VGG16.png)<br>
 
+
+### Reference Links
+- https://www.kaggle.com/code/blurredmachine/alexnet-architecture-a-complete-guide
+- https://medium.com/@mgazar/lenet-5-in-9-lines-of-code-using-keras-ac99294c8086
+- https://www.tensorflow.org/api_docs/python/tf/keras/applications/inception_resnet_v2
+- https://www.tensorflow.org/api_docs/python/tf/keras/applications/vgg16
+
+
