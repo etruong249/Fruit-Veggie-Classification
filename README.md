@@ -95,7 +95,46 @@ Additionally, while the pretrained network may seem a bit more inconsistent at f
 VGG16 is pretrained while LeNet is not:<br>
 ![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/LeNet_and_VGG16.png)<br>
 
+### Dataset File Structures:
 
+-Fruits_Vegetables_Dataset
+    --FreshApple
+    --FreshBanana
+    --FreshBellpepper
+    --FreshCarrot
+    --FreshCucumber
+    --FreshMango
+    --FreshOrange
+    --FreshPotato
+    --FreshStrawberry
+    --FreshTomato
+    --RottenApple
+    --RottenBanana
+    --RottenBellpepper
+    --RottenCarrot
+    --RottenCucumber
+    --RottenMango
+    --RottenOrange
+    --RottenPotato
+    --RottenStrawberry
+    --RottenTomato
+    
+ -Fruits_and_Veggies
+    --Apple
+    --Banana
+    --Bellpepper
+    --Carrot
+    --Cucumber
+    --Mango
+    --Orange
+    --Potato
+    --Strawberry
+    --Tomato
+
+-Freshness
+    --Fresh
+    --Rotten
+    
 ### Reference Links
 - https://www.kaggle.com/code/blurredmachine/alexnet-architecture-a-complete-guide
 - https://medium.com/@mgazar/lenet-5-in-9-lines-of-code-using-keras-ac99294c8086
