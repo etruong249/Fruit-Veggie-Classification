@@ -2,6 +2,8 @@
 
 ## Goal:
 
+The main goal was to compare performances of different architectures for convolutional neural networks. With each network having to label fruits and vegetables that were either rotten or fresh. We also were curious of the effects of splitting up the classification as well as seeing pretrained vs not pretrained models and stacked vs not stacked models to compare performance and get an idea of what works best for generic image classification.
+
 ## Description:
 Utilizing different CNN architectures and comparing their performances across 3 datasets. The datasets involved are duplicates of each other, but separated into different folders so they can be labeled differently. 
 The number of classes across the datasets are as follows: Fruits_Vegetables_Dataset - 20 classes, Fruits_and_Veggies - 10 classes, Freshness - 2 classes.
@@ -64,7 +66,18 @@ Just freshness classification:<br>
 ![alt text](https://github.com/etruong249/Fruit-Veggie-Classification/blob/main/ReadMe_images/ResV2-3-loss.png)<br>
 
 
-#Ultimately the best
+**Ultimately the best model was InceptionResNetv2**
+
+# Table of final test accuracies and loss:
+
+| Model:            | Test Loss (Both) | Test Loss (Food Type) | Test Loss (Freshness) | Test Accuracy (Both) | Test Accuracy (Food Type) | Test Accuracy (Freshness) |
+| ----------------- | ---------------- | --------------------- | --------------------- | -------------------- | ------------------------- | ------------------------- |
+| SingleCNN         | 0.8664           | 0.7803                | 0.3008                | 0.7358               | 0.7533                    | 0.8758                    |
+| LeNet             | 0.7437           | 0.623                 | 0.2932                | 0.7833               | 0.7883                    | 0.8833                    |
+| AlexNet           | 0.9324           | 0.6451                | 0.2589                | 0.7292               | 0.7717                    | 0.8975                    |
+| VGG16             | 0.4905           | 0.2485                | 0.1383                | 0.8525               | 0.9317                    | 0.9467                    |
+| InceptionResNetv2 | 0.2162           | 0.1417                | 0.0917                | 0.9375               | 0.9608                    | 0.97                      |
+
 
 The examples listed above include the LeNet-5 models and InceptionResNetV2. The reason behind these 2 choices are to showcase the performance differences between models from scratch and a pretrained model that used weights trained from imagenet. Between the 2 models, the LeNet-5 obtained a much lower accuracy score and much higher loss value compared to the InceptionResNetV2 model. This could be due to a list of factors, but the primary reasons are due to the initial starting weights and the depth and complexity difference between the 2 models. The use of the inception module alone is more complex and allows for better computations of each image and its accompanying weight that's calculated. 
 However, the use of the inception module is not generalizable to the other pretrained model used, which was the VGG-16. The VGG-16 is also pretrained using weights from imagenet, but performed substantially worse compared to the inceptionV2 architecture. It's performance still ranges about 10-15% higher in accuracy compared to LeNet-5. The use of pretrained models helps with computation times and memory usage, but it also allows for superior performance due to the generalizability of the pretrained data and just how generalizable our current dataset is.
