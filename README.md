@@ -20,9 +20,9 @@ images per fruit type: 1200 images<br>
 
 **NOTE: You need a Weights and Biases account setup to run this code**
 
-WeightsandBiases_Sweep.ipynb essentially loads the data generator in for the task of classifying both at the same time, then a wandb configuration is set and for each of the five models a wandb sweep is initialized and run with random search 5 times with 10 epoch each and the results are then uploaded to the weights and biases website for evaluation.
+WeightsandBiases_Sweep.ipynb essentially loads the data generator in for the task of classifying both freshness and food type at the same time, then a wandb configuration is set and for each of the five models a wandb sweep is initialized and run with random search 5 times with 10 epoch each and the results are then uploaded to the weights and biases website for evaluation.
 
-data.ipynb is a notebook that has 3 different data generators for the 3 different classification task so that each of the 5 models will be run under the different classification tasks. The 3 data generators are split into a validation, train and test set. Splits are labled differently as to keep them seperated and each model is then run with the hyperparameters obtained in the weights and sweep. At the end of each traininig for each model and their task the training and validation accuracy and loss are plotted for comparison and  predictions with test accuracy and loss are calcuated.
+data.ipynb is a notebook that has 3 different data generators for the 3 different classification task so that each of the 5 models will be run under the different classification tasks. The 3 data generators are split into a validation, train and test set. Splits are labled differently as to keep them seperated and each model is then run with the hyperparameters obtained in the weights and sweep. At the end of each traininig for each model and their task the training and validation accuracy and loss are plotted for comparison and predictions with test accuracy and loss are calcuated.
 
 Experimentation of models (testing which ones worked and whcih ones didn't/were not feasable to run) was done in earlier versions of the code and are not available in the final versions.
 
@@ -41,6 +41,8 @@ Afterwards the models were trained and tested for 15 epochs using the values we 
 This repository contains the notebook and the accompanying images that were obtained from our experiemnts. Is it currently lacking the dataset that was used because the file size is too large, but the kaggle link and labeling convention used will be attached towards the bottom.
 
 In terms of variable naming conventions in order to differentiate the different models trained on which dataset, number 1 refers to the Fruits_Vegetables_Dataset with 20 classes, number 2 represents Fruits_and_Veggies, and number 3 represents freshness. The results from the experiments are as follows (only linking 2 of the 5 architectures for the sake of space and most experiments yielded similar results):
+
+### *more of these results are available in the ReadMe_images folders, sorted by the same naming convention listed previously*
 
 # Hyperparameter tuning:
 
@@ -163,7 +165,7 @@ VGG16 is pretrained while LeNet is not:<br>
 
 * The less classes there are generally the more accurate the predictions, this causes model variance to increase though as can be seen in the plots for training and test accuracy/loss.
 * Pretrained models tend to vastly outperform models trained from scratch (this can be due to the classificaiton tasks being very general and not niche). Many images in the dataset were generic photos of fruit, some looked like stock photos
-* Classification tasks being split up seems to have a slight improvement on accuracy, regardless the jump in accuracy was much more apparent when moving from 10 (Food type) to 2 classes (Freshness), compared to 20 (Both classes) to 10 classes (Food type).
+* Classification tasks being split up seems to have a slight improvement on accuracy, but the jump in accuracy was much more apparent when moving from 10 (Food type) to 2 classes (Freshness), compared to 20 (Both classes) to 10 classes (Food type).
 
 ### Reference Links
 - https://www.kaggle.com/code/blurredmachine/alexnet-architecture-a-complete-guide
