@@ -5,7 +5,7 @@
 The main goal was to compare performances of different architectures for convolutional neural networks. With each network having to label fruits and vegetables that were either rotten or fresh. We also were curious of the effects of splitting up the classification as well as seeing pretrained vs not pretrained models and stacked vs not stacked models to compare performance and get an idea of what works best for generic image classification.
 
 ## Details about the data
-**Note: file structure is at the bottom of the notbook**
+**Note: file structure is at the bottom of the notebook**
 
 Total images: 12000
 
