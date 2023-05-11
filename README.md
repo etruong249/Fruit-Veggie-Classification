@@ -9,11 +9,11 @@ The main goal was to compare performances of different architectures for convolu
 
 Total images: 12000
 
-The images are split into fruit/veggie (10 classes), and freshness (2).
+The images are split into fruit/veggie (10 classes), and freshness (2 classes).
 
 Across the 20 classes: approximately 300 images each
-Images per freshness: 6000
-images per fruit type: 1200
+Images per freshness: 6000 images
+images per fruit type: 1200 images 
 
 
 ## What the 2 files do and brief overview of code:
