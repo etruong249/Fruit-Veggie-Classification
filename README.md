@@ -10,5 +10,7 @@ Various other architectures were tested, like ResNet50 and GoogLeNet, but these 
 
 This repository contains the notebook and the accompanying images that were obtained from our experiemnts. Is it currently lacking the dataset that was used because the file size is too large, but the kaggle link and labeling convention used will be attached towards the bottom.
 
-In terms of variable naming conventions in order to differentiate the different models trained on which dataset, number 1 refers to the Fruits_Vegetables_Dataset with 20 classes, number 2 represents Fruits_and_Veggies, and number 3 represents freshness. The results from the experiments are as follows:
+In terms of variable naming conventions in order to differentiate the different models trained on which dataset, number 1 refers to the Fruits_Vegetables_Dataset with 20 classes, number 2 represents Fruits_and_Veggies, and number 3 represents freshness. The results from the experiments are as follows (only linking 2 of the 5 architectures for the sake of space and most experiments yielded similar results):
 
+LeNet-5:
+LeNet1.png
